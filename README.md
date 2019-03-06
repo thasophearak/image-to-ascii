@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/sophearak/image-to-ascii/master/assets/image-to-ascii.png" height="500" />
 </p>
 
-Serverless service that convert image to ascii written in [Golang](https://golang.org/).
+Serverless service that generate ascii image written in [Golang](https://golang.org/).
 
 ## Deploy your own
 
