@@ -1,0 +1,14 @@
+{
+  "name": "image-to-ascii",
+  "version": 2,
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    },
+    {
+      "src": "ascii.go",
+      "use": "@now/go@canary"
+    }
+  ]
+}
