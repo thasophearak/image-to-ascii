@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/sophearak/image-to-ascii/master/assets/cover.png" height="500" />
+  <img src="https://raw.githubusercontent.com/sophearak/image-to-ascii/master/assets/image-to-ascii.png" height="500" />
 </p>
 
 Serverless service that convert image to ascii written in [Golang](https://golang.org/).
