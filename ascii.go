@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"encoding/json"
 	"fmt"
 	"image"
 	"image/jpeg"
@@ -14,6 +15,10 @@ import (
 
 	ascii "github.com/sophearak/goasciiart"
 )
+
+type asciiText struct {
+	ASCII string `json:"ascii"`
+}
 
 func H(w http.ResponseWriter, r *http.Request) {
 	imgURL := r.URL.Query().Get("img")
@@ -46,6 +51,13 @@ func H(w http.ResponseWriter, r *http.Request) {
 		buffer := new(bytes.Buffer)
 
 		switch o {
+		case "ascii":
+			r := asciiText{ASCII: string(asciiBytes)}
+			jm, _ := json.Marshal(r)
+			w.Header().Set("Content-Type", "application/json")
+			w.Header().Set("Content-Length", strconv.Itoa(len(string(jm))))
+
+			w.Write(jm)
 		case "jpg":
 			startJpgEndcode := time.Now()
 			jpeg.Encode(buffer, rgba, nil)

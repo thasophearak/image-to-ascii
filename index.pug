@@ -21,6 +21,7 @@ html(lang='en')
           label(for='typeOption') Output
           .with-icon
             select.js-input(name='typeOption' id='typeOption')
+              option(value='ascii') ASCII
               option(value='png') PNG
               option(value='jpg' selected) JPG
             svg(xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24')
@@ -28,6 +29,7 @@ html(lang='en')
         .field
           button.js-button Generate
       .result
+        pre#ascii
         img(src='./assets/gopher-ascii.jpeg' id='imgResult')
         .hide.ph-item.js-loading
           .ph-col-12

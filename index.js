@@ -6,20 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
   const output = $('#typeOption');
   const btn = $('button');
   const imgResult = $('#imgResult');
+  const asciiPre = $('#ascii');
+
+  asciiPre.classList.add('hide');
 
   btn.addEventListener('click', () => {
     const url = `${window.location.origin}/ascii.go?img=${
       imgInput.value
       }&output=${output[output.selectedIndex].value}`;
 
-    disableForm(true);
+    if (output[output.selectedIndex].value !== 'ascii') {
+      disableForm(true);
 
-    imgResult.setAttribute('src', '');
-    imgResult.setAttribute('src', url);
+      imgResult.setAttribute('src', '');
+      imgResult.setAttribute('src', url);
 
-    imgResult.addEventListener('load', () => {
-      disableForm(false);
-    });
+      imgResult.addEventListener('load', () => {
+        disableForm(false);
+      });
+    } else {
+      const loading = $('.js-loading');
+      asciiPre.classList.remove('hide');
+      imgResult.classList.add('hide');
+
+      loading.classList.add('hide');
+      getData(url).then(result => {
+        asciiPre.innerText = result.ascii;
+        loading.classList.remove('hide');
+      });
+    }
   });
 
   function disableForm(disable) {
@@ -43,5 +58,16 @@ document.addEventListener('DOMContentLoaded', () => {
     inputs.forEach(input => {
       input.removeAttribute('disabled');
     });
+  }
+
+  function getData(url = ``) {
+    return fetch(url, {
+      method: 'GET',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    })
+      .then(response => response.json());
   }
 });
