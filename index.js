@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btn = $('button');
   const imgResult = $('#imgResult');
   const asciiPre = $('#ascii');
+  const copied = $('#js-copied')
 
   asciiPre.classList.add('hide');
 
@@ -20,19 +21,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
       imgResult.setAttribute('src', '');
       imgResult.setAttribute('src', url);
-
+      copied.classList.add('hide');
+      asciiPre.classList.add('hide');
       imgResult.addEventListener('load', () => {
         disableForm(false);
       });
     } else {
       const loading = $('.js-loading');
-      asciiPre.classList.remove('hide');
       imgResult.classList.add('hide');
 
-      loading.classList.add('hide');
+      loading.classList.remove('hide');
+      copied.classList.add('hide');
       getData(url).then(result => {
+        asciiPre.classList.remove('hide');
         asciiPre.innerText = result.ascii;
-        loading.classList.remove('hide');
+        loading.classList.add('hide');
+        copyToClipboard(result.ascii);
+        copied.classList.remove('hide');
       });
     }
   });
@@ -70,4 +75,17 @@ document.addEventListener('DOMContentLoaded', () => {
     })
       .then(response => response.json());
   }
+
+  const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.style.whiteSpace = 'pre'
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    el.value = str;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+  };
 });
