@@ -3,12 +3,12 @@
   "version": 2,
   "builds": [
     {
-      "src": "package.json",
-      "use": "@now/static-build"
+      "src": "index.go",
+      "use": "@now/go"
     },
     {
-      "src": "ascii.go",
-      "use": "@now/go@canary"
+      "src": "assets/**",
+      "use": "@now/static"
     }
   ]
 }
