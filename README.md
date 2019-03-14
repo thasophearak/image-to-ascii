@@ -14,7 +14,7 @@ You'll want to fork this repository and deploy your own image to primitive.
 
 Alternatively, you can do a one-click to deploy with the button below.
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/sophearak/image-to-ascii)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://zeit.co/new/project?template=sophearak/image-to-ascii)
 
 Credits
 
