@@ -20,8 +20,8 @@ func Index(w http.ResponseWriter) {
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<meta http-equiv="X-UA-Compatible" content="ie=edge">
 				<title>Image to ASCII</title>
-				<meta name="twitter:image" content="https://image-to-ascii.now.sh/assets/image-to-ascii.png">
-				<meta property="og:image" content="https://image-to-ascii.now.sh/assets/image-to-ascii.png">
+				<meta name="twitter:image" content="https://image-to-ascii.now.sh/assets/image-2-ascii.png">
+				<meta property="og:image" content="https://image-to-ascii.now.sh/assets/image-2-ascii.png">
 				<style type="text/css">
 					*,:after,:before {
 						box-sizing: border-box
