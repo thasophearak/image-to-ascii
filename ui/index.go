@@ -321,7 +321,7 @@ func Index(w http.ResponseWriter) {
 				<h1>Image to ASCII</h1>
 				<div class="container">
 					 <div class="fields">
-							<div class="field"><label for="imgInput">Image</label><input class="js-input" type="text" id="imgInput" value="https://image-to-ascii.now.sh/assets/gopher.png"></div>
+							<div class="field"><label for="imgInput">Image</label><input class="js-input" type="text" id="imgInput" value="https://image-to-ascii.now.sh/assets/go-logo.jpg"></div>
 							<div class="field">
 								 <label for="typeOption">Output</label>
 								 <div class="with-icon">
@@ -344,7 +344,7 @@ func Index(w http.ResponseWriter) {
 					 </div>
 					 <div class="result">
 							<pre id="ascii"></pre>
-							<img src="/assets/gopher-ascii.jpeg" id="imgResult">
+							<img src="/assets/go-logo-ascii.jpg" id="imgResult">
 							<div class="hide ph-item js-loading">
 								 <div class="ph-col-12">
 										<div class="ph-picture"></div>
