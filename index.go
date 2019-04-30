@@ -11,9 +11,10 @@ import (
 	"strconv"
 	"strings"
 
+	ui "image-to-ascii/ui"
+
 	"github.com/mattes/go-asciibot"
 	ascii "github.com/sophearak/goasciiart"
-	ui "github.com/sophearak/image-to-ascii/ui"
 )
 
 type asciiText struct {
