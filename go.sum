@@ -6,6 +6,8 @@ github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 h1:zYyBkD/k9seD2A7fsi6
 github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646/go.mod h1:jpp1/29i3P1S/RLdc7JQKbRpFeM1dOBd8T9ki5s+AY8=
 github.com/sophearak/goasciiart v0.0.0-20190306090744-3cf6a02d7dc0 h1:uDI0L7Pca1mdm+NyZvV4aM74McEeCNsqyAb/VFBsGZg=
 github.com/sophearak/goasciiart v0.0.0-20190306090744-3cf6a02d7dc0/go.mod h1:qNScrWGK46PuDyPXOk8UN3+Ug6+u8REZvSIlDyHOjvU=
+github.com/sophearak/image-to-ascii v0.0.0-20190315135825-502b1f821d82 h1:JtAHFg72rJZNPtNvm8QGbwpzPl7q/B6r2HDItSQOyyI=
+github.com/sophearak/image-to-ascii v0.0.0-20190315135825-502b1f821d82/go.mod h1:cBfez5zZCy/7gUhruewAIiBRpBqbw38E7H4LXBupFbQ=
 github.com/tdewolff/minify v2.3.6+incompatible h1:2hw5/9ZvxhWLvBUnHE06gElGYz+Jv9R4Eys0XUzItYo=
 github.com/tdewolff/minify v2.3.6+incompatible/go.mod h1:9Ov578KJUmAWpS6NeZwRZyT56Uf6o3Mcz9CEsg8USYs=
 github.com/tdewolff/parse v2.3.4+incompatible h1:x05/cnGwIMf4ceLuDMBOdQ1qGniMoxpP46ghf0Qzh38=
